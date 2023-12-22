@@ -1,61 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Samrawit</title>
-  </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="./index.html">
-          <img src="../images/logo.jpg" alt="My Logo" />
+    <link rel="stylesheet" href="dist/output.css">
+   
+    
+</head>
+
+<body class="font-sans">
+  <header class="bg-white shadow-md py-4">
+    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+      <div class="navbar__logo">
+        <a href="index.html" class="flex items-center">
+          <img src="images/logo.jpg" alt="My Logo" class="w-20 h-10" />
         </a>
       </div>
-      <a href="index.html">Home</a>
-      <a href="About.html">About</a>
-      <a href="Projects.html">Projects</a>
-      <a href="Services.html">Services</a>
-      <a href="Contact.html">Contact</a>
-    </nav>
-    <br />
-    <main id="home">
-      <img src="../images/AvatarMaker.png" alt="Description of the image" />
+  
+      <button
+        id="hamburger"
+        class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 lg:hidden"
+      >
+        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
 
-      <div>
-        <p>
-          Welcome to my portfolio! <br />
+      <nav class="fixed top-0 right-0 w-full h-1/2 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden" id="navbarLinks">
+        <ul class="flex flex-col items-center justify-center h-full space-y-6 navbar__links">
+          <li><a href="index.html" class="text-gray-700">Home</a></li>
+          <li><a href="about.html" class="text-gray-700">About</a></li>
+          <li><a href="projects.html" class="text-gray-700">Projects</a></li>
+          <li><a href="services.html" class="text-gray-700">Services</a></li>
+          <li><a href="contact.html" class="text-gray-700">Contact</a></li>
+        </ul>
+      </nav>
+  
+      <nav class="hidden lg:flex space-x-4 navbar__links">
+        <a href="index.html" class="text-gray-700">Home</a>
+        <a href="about.html" class="text-gray-700">About</a>
+        <a href="projects.html" class="text-gray-700">Projects</a>
+        <a href="services.html" class="text-gray-700">Services</a>
+        <a href="contact.html" class="text-gray-700">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+    
 
-          I am a graphic designer and programmer with a passion for creating
-          beautiful and functional designs. I am a third-year university student
-          , where I am studying Software engineering. I have a strong
-          understanding of design principles and am proficient in a variety of
-          design software, including Adobe Photoshop, Illustrator, and InDesign.
-          I am also a skilled programmer, with experience in HTML, CSS, and
-          JavaScript.
-        </p>
-        <a href="./projects.html" class="button"> Let's tour </a>
-      </div>
-    </main>
-    <hr />
-    <footer>
-      <div class="social-icons">
-        <a href="https://www.github.com/samrwitt" target="_blank"
-          ><img src="../images/github.jpg" alt="GitHub"
-        /></a>
-        <a href="https://t.me/Fumble_wit" target="_blank"
-          ><img src="../images/telegram.png" alt="Telegram"
-        /></a>
-        <a
-          href="https://et.linkedin.com/in/samrawit-tesfay-20a404283"
-          target="_blank"
-          ><img src="../images/linkedin.png" alt="linkedin"
-        /></a>
-        <a href="mailto:samrawitkta@gmail.com" target="_blank"
-          ><img src="../images/Gmail_icon.png" alt="gmail"
-        /></a>
-      </div>
-      <p>Made by Samrwit.K</p>
-      <p>&copy; 2023 Your Website. All rights reserved.</p>
-    </footer>
-  </body>
+  <main id="home" class="mt-8 p-4">
+    <div class="hero-section flex flex-col-reverse items-center justify-center sm:flex-row">
+      <div class="hero-section__image mt-4 sm:mt-0">
+        <img src="images/AvatarMaker.png" alt="Description of the image" class="w-64 h-64 rounded-full" />
+    </div>
+        <div class="hero-section__text ml-8 max-w-md">
+            <h6 class="hero-section__title text-2xl font-semibold">Welcome To My Portfolio!</h6>
+            <p class="hero-section__paragraph mt-4">
+                I am a graphic designer and programmer with a passion for creating
+                beautiful and functional designs. I am a third-year university
+                student, where I am studying Software engineering. I have a strong
+                understanding of design principles and am proficient in a variety of
+                design software, including Adobe Photoshop, Illustrator, and
+                InDesign. I am also a skilled programmer, with experience in HTML,
+                CSS, and JavaScript.
+            </p>
+            <a href="projects.html" class="hero-section__button inline-block mt-4 px-6 py-3 bg-blue-500 text-white rounded">Let's Tour</a>
+        </div>
+     
+    </div>
+</main>
+<hr class="mt-8" />
+
+    <footer class="footer mt-8 p-4">
+        <div class="footer-content flex flex-col sm:flex-row justify-between items-center">
+          <div class="footer__social-icons flex flex-row space-x-4 mb-4 sm:mb-0">
+            <a href="https://www.github.com/samrwitt" target="_blank">
+              <img src="images/github.jpg" alt="GitHub" class="w-6 h-6" />
+            </a>
+            <a href="https://t.me/Fumble_wit" target="_blank">
+              <img src="images/telegram.png" alt="Telegram" class="w-6 h-6" />
+            </a>
+            <a href="https://et.linkedin.com/in/samrawit-tesfay-20a404283" target="_blank">
+              <img src="images/linkedin.png" alt="LinkedIn" class="w-6 h-6" />
+            </a>
+            <a href="mailto:samrawitkta@gmail.com" target="_blank">
+              <img src="images/Gmail_icon.png" alt="Gmail" class="w-6 h-6" />
+            </a>
+          </div>
+      
+          <div class="flex flex-col text-center ">
+            <p class="footer-content__copyright mb-2">&copy; 2023 Your Website. All rights reserved.</p>
+            </div>
+            <div class="flex flex-col text-center sm:text-right ">
+            <p class="footer-content__made-by">Made by Samrwit.K</p>
+          </div>
+        </div>
+      </footer>
+      <script src="js/script.js"></script>
+</body>
+
 </html>
