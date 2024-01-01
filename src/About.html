@@ -1,102 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
-    <title>Your Website</title>
-  </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About</title>
+    <link rel="stylesheet" href="dist/output.css">
+   
+   
+</head>
 
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="./index.html">
-          <img src="../images/logo.jpg" alt="My Logo" />
-        </a>
-      </div>
-      <a href="index.html">Home</a>
-      <a href="About.html">About</a>
-      <a href="Projects.html">Projects</a>
-      <a href="Services.html">Services</a>
-      <a href="Contact.html">Contact</a>
-    </nav>
-    <br />
+<body class="font-sans">
 
-    <main id="about">
-      <h1>About Me</h1>
-      <div id="AboutParagraph">
-        <div>
-          <p>
+    <header class="bg-white shadow-md py-4">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+          <div class="navbar__logo">
+            <a href="index.html" class="flex items-center">
+              <img src="images/logo.jpg" alt="My Logo" class="w-20 h-10" />
+            </a>
+          </div>
+      
+          <button
+            id="hamburger"
+            class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 lg:hidden"
+          >
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+    
+          <nav class="fixed top-0 right-0 w-full h-1/2 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden" id="navbarLinks">
+            <ul class="flex flex-col items-center justify-center h-full space-y-6 navbar__links">
+              <li><a href="index.html" class="text-gray-700">Home</a></li>
+              <li><a href="about.html" class="text-gray-700">About</a></li>
+              <li><a href="projects.html" class="text-gray-700">Projects</a></li>
+              <li><a href="services.html" class="text-gray-700">Services</a></li>
+              <li><a href="contact.html" class="text-gray-700">Contact</a></li>
+            </ul>
+          </nav>
+      
+          <nav class="hidden lg:flex space-x-4 navbar__links">
+            <a href="index.html" class="text-gray-700">Home</a>
+            <a href="about.html" class="text-gray-700">About</a>
+            <a href="projects.html" class="text-gray-700">Projects</a>
+            <a href="services.html" class="text-gray-700">Services</a>
+            <a href="contact.html" class="text-gray-700">Contact</a>
+          </nav>
+        </div>
+      </header>
+    
+
+    <main class="about p-8">
+        <h1 class="about__title text-4xl font-bold mb-4 text-center">About Me</h1>
+
+<div class="about__content flex flex-col md:flex-row items-center justify-center">
+    <div class="about__paragraph md:mr-8 mb-4 md:mb-0 md:w-1/2" id="AboutParagraph">
+        <p>
             Hi there! I'm Samrawit, a software engineering student currently
             immersed in the fascinating world of coding and problem-solving. As
             I delve deeper into this ever-evolving field, I'm captivated by the
             endless possibilities it holds for creating innovative solutions
             that shape our digital landscape.
-          </p>
-          <ul>
-            <li>logo designing</li>
-            <li>illustration</li>
+        </p>
+        <div class="grid grid-cols-2 gap-4">
+          <ul class="about__list list-disc pl-4">
+            <li>Logo designing</li>
+            <li>Illustration</li>
             <li>Website designing</li>
-            <li>app development</li>
-            <li>bot development</li>
-            <li>algorithm writing</li>
+          </ul>
+          <ul class="about__list list-disc pl-4">
+            <li>App and bot development</li>
+            <li>Algorithm writing</li>
           </ul>
         </div>
-        <div id="AboutImg">
-          <img src="../images/avatarmaker.png" alt="Description of the image" />
-        </div>
-      </div>
-      <h2>Certificates</h2>
-      <div class="card-container">
-        <div class="card">
-          <img src="../images/certimage1.jpg" alt="Image" class="card-image" />
-          <h2>Red hat Administration</h2>
-          <p>
-            certificate of recognition from Red hat on sytem admintstration.
-          </p>
-          <a href="../images/cert1.jpg"> see certificate </a>
-        </div>
-        <div class="card">
-          <img src="../images/certimage2.jpg" alt="Image" class="card-image" />
-          <h2>Networking</h2>
-          <p>
-            Certificate of recognition from cisco academy on networking
-            essential.
-          </p>
-          <a href="../images/cert2.jpg"> see certificate </a>
-        </div>
-        <div class="card">
-          <img src="../images/certimage3.png" alt="Image" class="card-image" />
-          <h2>Time managment</h2>
-          <p>
-            Certificate of recognition from udemy on mastering time managment.
-          </p>
-        </div>
-      </div>
+    </div>
 
-      <div class="navigation">
-        <button onclick="prevCard()">Previous</button>
-        <button onclick="nextCard()">Next</button>
-      </div>
+    <div class="about__image">
+        <img src="images/AvatarMaker.png" alt="Description of the image" class="w-64 h-64 " />
+    </div>
+</div>
+<h1 class="about__certificates-title text-4xl font-bold mt-8 mb-4 text-center">Certificates</h1>
+
+<div class="about__card-container flex overflow-x-scroll space-x-4 p-4 align-center items-center w:full justify-between">
+    <div class="about__card card bg-white border border-gray-300 flex flex-col items-center justify-center flex-shrink-0 w-72">
+        <img src="images/certimage1.jpg" alt="Image" class="card__image w-full h-40 " />
+        <h2 class="card__title text-lg font-semibold mt-4">Red hat Administration</h2>
+        <p class="card__description">
+            Certificate of recognition from Red hat on system administration.
+        </p>
+        <a href="images/cert1.jpg" class="card__link text-blue-500">See certificate</a>
+    </div>
+    <div class="about__card card bg-white border border-gray-300 flex flex-col items-center justify-center flex-shrink-0 w-72">
+        <img src="images/certimage2.jpg" alt="Image" class="card__image w-full h-40 " />
+        <h2 class="card__title text-lg font-semibold mt-4">Networking</h2>
+        <p class="card__description">
+            Certificate of recognition from Cisco academy on networking essentials.
+        </p>
+        <a href="images/cert2.jpg" class="card__link text-blue-500">See certificate</a>
+    </div>
+    <div class="about__card card bg-white border border-gray-300 flex flex-col items-center justify-center flex-shrink-0 w-72">
+        <img src="images/certimage3.png" alt="Image" class="card__image w-full h-40 " />
+        <h2 class="card__title text-lg font-semibold mt-4">Time management</h2>
+        <p class="card__description">
+            Certificate of recognition from Udemy on mastering time management.
+        </p>
+    </div>
+</div>
+
+</main>
+
+
+<hr class="mt-8" />
     </main>
-    <hr />
-    <footer>
-      <div class="social-icons">
-        <a href="https://www.github.com/samrwitt" target="_blank"
-          ><img src="../images/github.jpg" alt="GitHub"
-        /></a>
-        <a href="https://t.me/Fumble_wit" target="_blank"
-          ><img src="../images/telegram.png" alt="Telegram"
-        /></a>
-        <a
-          href="https://et.linkedin.com/in/samrawit-tesfay-20a404283"
-          target="_blank"
-          ><img src="../images/linkedin.png" alt="linkedin"
-        /></a>
-        <a href="mailto:samrawitkta@gmail.com" target="_blank"
-          ><img src="../images/Gmail_icon.png" alt="gmail"
-        /></a>
-      </div>
-      <p>Made by Samrwit.K</p>
-      <p>&copy; 2023 Your Website. All rights reserved.</p>
-    </footer>
-  </body>
+
+    <footer class="footer mt-8 p-4">
+        <div class="footer-content flex flex-col sm:flex-row justify-between items-center">
+          <div class="footer__social-icons flex flex-row space-x-4 mb-4 sm:mb-0">
+            <a href="https://www.github.com/samrwitt" target="_blank">
+              <img src="images/github.jpg" alt="GitHub" class="w-6 h-6" />
+            </a>
+            <a href="https://t.me/Fumble_wit" target="_blank">
+              <img src="images/telegram.png" alt="Telegram" class="w-6 h-6" />
+            </a>
+            <a href="https://et.linkedin.com/in/samrawit-tesfay-20a404283" target="_blank">
+              <img src="images/linkedin.png" alt="LinkedIn" class="w-6 h-6" />
+            </a>
+            <a href="mailto:samrawitkta@gmail.com" target="_blank">
+              <img src="images/Gmail_icon.png" alt="Gmail" class="w-6 h-6" />
+            </a>
+          </div>
+      
+          <div class="flex flex-col text-center ">
+            <p class="footer-content__copyright mb-2">&copy; 2023 Your Website. All rights reserved.</p>
+            </div>
+            <div class="flex flex-col text-center sm:text-right ">
+            <p class="footer-content__made-by">Made by Samrwit.K</p>
+          </div>
+        </div>
+      </footer>
+      <script src="js/script.js"></script>
+</body>
+
 </html>

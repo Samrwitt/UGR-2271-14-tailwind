@@ -2,186 +2,230 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services</title>
+    <link rel="stylesheet" href="dist/output.css">
   </head>
-  <body>
-    <nav>
-      <div class="logo">
-        <a href="./index.html">
-          <img src="../images/logo.jpg" alt="My Logo" />
-        </a>
+
+  <body class="font-sans">
+    
+    <header class="bg-white shadow-md py-4">
+      <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+        <div class="navbar__logo">
+          <a href="index.html" class="flex items-center">
+            <img src="images/logo.jpg" alt="My Logo" class="w-20 h-10" />
+          </a>
+        </div>
+    
+        <button
+          id="hamburger"
+          class="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-white hover:bg-gray-700 lg:hidden"
+        >
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+  
+        <nav class="fixed top-0 right-0 w-full h-1/2 bg-white z-50 transform translate-x-full transition-transform duration-300 ease-in-out lg:hidden" id="navbarLinks">
+          <ul class="flex flex-col items-center justify-center h-full space-y-6 navbar__links">
+            <li><a href="index.html" class="text-gray-700">Home</a></li>
+            <li><a href="about.html" class="text-gray-700">About</a></li>
+            <li><a href="projects.html" class="text-gray-700">Projects</a></li>
+            <li><a href="services.html" class="text-gray-700">Services</a></li>
+            <li><a href="contact.html" class="text-gray-700">Contact</a></li>
+          </ul>
+        </nav>
+    
+        <nav class="hidden lg:flex space-x-4 navbar__links">
+          <a href="index.html" class="text-gray-700">Home</a>
+          <a href="about.html" class="text-gray-700">About</a>
+          <a href="projects.html" class="text-gray-700">Projects</a>
+          <a href="services.html" class="text-gray-700">Services</a>
+          <a href="contact.html" class="text-gray-700">Contact</a>
+        </nav>
       </div>
-      <a href="index.html">Home</a>
-      <a href="About.html">About</a>
-      <a href="Projects.html">Projects</a>
-      <a href="Services.html">Services</a>
-      <a href="Contact.html">Contact</a>
-    </nav>
-    <br />
-    <h1>Services</h1>
-    <div class="card-container">
-      <div class="card">
-        <img src="../images/service1.jpg" alt="Image" class="card-image" />
-        <h2>Logo designing</h2>
-        <p>Logo designing using photoshop and adboe illustrator.</p>
-        <button id="toggleButton1">Read More</button>
-        <div class="hiddenContent" id="hiddenContent1" style="display: none">
-          <p>
+    </header>
+    <h1 class="main-heading text-4xl font-semibold mt-8 p-4 text-center ">Services</h1>
+    <div
+      class="services-container grid grid-cols-1 sm:grid-cols-3 md:grid-cols-2 lg:grid-cols-3 gap-8 p-4"
+    >
+      <div class="card bg-white border border-gray-300 p-4  flex flex-col items-center justify-center">
+        <img src="images/service1.jpg" alt="Image" class="card__image" />
+        <h2 class="card__title text-xl font-semibold mt-4">Logo designing</h2>
+        <p class="text mt-2 text-center">
+          Logo designing using Photoshop and Adobe Illustrator.
+          <span class="more-text hidden block mt-2">
             I have 5 years of experience. I have worked with Google, Amazon,
-            Meta. feel free to check out my works
-          </p>
-        </div>
+            Meta. Feel free to check out my works.
+          </span>
+        </p>
+        <button class="readmore-button bg-blue-500 text-white py-2 px-4 rounded-full mt-4">Read More</button>
       </div>
 
-      <div class="card">
-        <img src="../images/service2.jpg" alt="Image" class="card-image" />
-        <h2>App development</h2>
-        <p>App development using kotlin java and flutter.</p>
-        <button id="toggleButton2">Read More</button>
-        <div class="hiddenContent" id="hiddenContent2" style="display: none">
-          <p>
-            I have developed around 20 applications of which 6 of them are
-            currently found in google play store. You can check the quality of
-            my previous works.
-          </p>
-        </div>
+      <div class="card bg-white border border-gray-300 p-4 flex flex-col items-center justify-center ">
+        <img src="images/service2.jpg" alt="Image" class="card__image" />
+        <h2 class="card__title text-xl font-semibold mt-4">App development</h2>
+        <p class="text mt-2 text-center">
+          App development using Kotlin, Java, and Flutter.
+          <span class="more-text hidden block mt-2">
+            I have developed around 20 applications, of which 6 are currently
+            found in Google Play Store. You can check the quality of my previous
+            works.
+          </span>
+        </p>
+        <button class="readmore-button bg-blue-500 text-white py-2 px-4 rounded-full mt-4">Read More</button>
+
       </div>
 
-      <div class="card">
-        <img src="../images/service3.jpg" alt="Image" class="card-image" />
-        <h2>Web designing</h2>
-        <p>we design using different js and python frameworks.</p>
-        <button id="toggleButton3">Read More</button>
-        <div class="hiddenContent" id="hiddenContent3" style="display: none">
-          <p>
-            I have developed wesbsite using node.js and express.js. I have also
-            expereince in flask and django framework.
-          </p>
-        </div>
+      <div class="card bg-white border border-gray-300 p-4 flex flex-col items-center justify-center ">
+        <img src="images/service3.jpg" alt="Image" class="card__image" />
+        <h2 class="card__title text-xl font-semibold mt-4">Web designing</h2>
+        <p class="text mt-2 text-center">
+          We design using different JS and Python frameworks.
+          <span class="more-text hidden block mt-2">
+            I have developed websites using Node.js and Express.js. I also have
+            experience in Flask and Django frameworks.
+          </span>
+        </p>
+        <button class="readmore-button bg-blue-500 text-white py-2 px-4 rounded-full mt-4">Read More</button>
       </div>
 
-      <div class="card">
-        <img src="../images/service4.jpg" alt="Image" class="card-image" />
-        <h2>illustration</h2>
-        <p>various illustration for magazine and promotions.</p>
-        <button id="toggleButton4">Read More</button>
-        <div class="hiddenContent" id="hiddenContent4" style="display: none">
-          <p>
+      <div class="card bg-white border border-gray-300 p-4 flex flex-col items-center justify-center ">
+        <img src="images/service4.jpg" alt="Image" class="card__image" />
+        <h2 class="card__title text-xl font-semibold mt-4">Illustration</h2>
+        <p class="text mt-2 text-center">
+          Various illustrations for magazines and promotions.
+          <span class="more-text hidden block mt-2">
             Call it marketing, promotion, magazine works, I have so many works
-            to showcase
-          </p>
-        </div>
+            to showcase.
+          </span>
+        </p>
+        <button class="readmore-button bg-blue-500 text-white py-2 px-4 rounded-full mt-4">Read More</button>
       </div>
 
-      <div class="card">
-        <img src="../images/service5.jpg" alt="Image" class="card-image" />
-        <h2>Algorithm writing</h2>
-        <p>competitive programming and preparing advanced algorithm</p>
-        <button id="toggleButton5">Read More</button>
-        <div class="hiddenContent" id="hiddenContent5" style="display: none">
-          <p>
+      <div class="card bg-white border border-gray-300 p-4  flex flex-col items-center justify-center">
+        <img src="images/service5.jpg" alt="Image" class="card__image" />
+        <h2 class="card__title text-xl font-semibold mt-4">
+          Algorithm writing
+        </h2>
+        <p class="text mt-2 text-center">
+          Competitive programming and preparing advanced algorithms.
+          <span class="more-text hidden block mt-2">
             I have been a competitive programmer for 5 years and can help you
-            with algorithms. >cryptocurrency algorithm, blockchain algorithm,
-            machine learning algorithm
-          </p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <h2>Testominals</h2>
-    </div>
-    <div class="testmonial">
-      <div class="testimonial-card">
-        <img src="../images/person1.png" alt="User Avatar" />
-        <div class="testimonial-text">
-          <p>
-            Samrawit is an exceptional teammate who always brings a positive and
-            collaborative attitude to every project. She is a skilled programmer
-            and designer with a deep understanding of web technologies and user
-            experience principles. I highly recoomend her
-          </p>
-          <p>- John Doe</p>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <img src="../images/person2.png" alt="User Avatar" />
-        <div class="testimonial-text">
-          <p>
-            Samrawit is a talented and creative programmer and designer who is
-            always looking for new and innovative ways to solve problems. She is
-            a quick learner and is always eager to expand her knowledge and
-            skills. Samrawit is also a great communicator and is able to clearly
-            and effectively explain technical concepts to non-technical people.
-          </p>
-          <p>- Wax Miranda</p>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <img src="../images/person3.png" alt="User Avatar" />
-        <div class="testimonial-text">
-          <p>
-            Samrawit is a pleasure to work with. She is always positive,
-            enthusiastic, and motivated. She is also a very hard worker and is
-            always willing to put in the extra effort to make sure that her
-            projects are successful. Samrawit is a valuable asset to any team
-            and I am very glad to have her as a colleague.
-          </p>
-          <p>- Steris Rud</p>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <img src="../images/person 4.png" alt="User Avatar" />
-        <div class="testimonial-text">
-          <p>
-            Samrawit is a skilled programmer and designer who has a knack for
-            creating user-friendly and visually appealing designs. She is also a
-            great problem solver and is always able to come up with creative
-            solutions to complex problems. Samrawit is a team player and is
-            always willing to collaborate with others to achieve common goals.
-          </p>
-          <p>- Wayne Keller</p>
-        </div>
-      </div>
-      <div class="testimonial-card">
-        <img src="../images/person 5.jpg" alt="User Avatar" />
-        <div class="testimonial-text">
-          <p>
-            Samrawit is a talented and reliable programmer and designer. She is
-            always on time and within budget. She is also a great communicator
-            and is always willing to answer my questions and provide me with
-            updates on the progress of my project. I am very happy with the work
-            that Samrawit has done for me and I will definitely be using her
-            services again in the future.
-          </p>
-          <p>- Vin smith</p>
-        </div>
+            with algorithms, including cryptocurrency algorithms, blockchain
+            algorithms, and machine learning algorithms.
+          </span>
+        </p>
+        <button class="readmore-button bg-blue-500 text-white py-2 px-4 rounded-full mt-4">Read More</button>
       </div>
     </div>
 
-    <div class="controls">
-      <button onclick="prevImage()">Previous</button>
-      <button onclick="nextImage()">Next</button>
-    </div>
-    <hr />
-    <footer>
-      <div class="social-icons">
-        <a href="https://www.github.com/samrwitt" target="_blank"
-          ><img src="../images/github.jpg" alt="GitHub"
-        /></a>
-        <a href="https://t.me/Fumble_wit" target="_blank"
-          ><img src="../images/telegram.png" alt="Telegram"
-        /></a>
-        <a
-          href="https://et.linkedin.com/in/samrawit-tesfay-20a404283"
-          target="_blank"
-          ><img src="../images/linkedin.png" alt="linkedin"
-        /></a>
-        <a href="mailto:samrawitkta@gmail.com" target="_blank"
-          ><img src="../images/Gmail_icon.png" alt="gmail"
-        /></a>
+    <div class="testimonials mt-8 p-4 overflow-x-scroll">
+      <h2 class="testimonials__heading text-2xl font-semibold">Testimonials</h2>
+      <div class="testimonial-container flex space-x-4">
+          <div class="testimonial-card flex-shrink-0 border p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+              <div class="testimonial-card__avatar-container relative">
+                  <img src="images/person1.png" alt="User Avatar" class="testimonial-card__avatar rounded-full w-8 h-8" />
+                  <div class="testimonial-card__avatar-overlay absolute h-full bg-white"></div>
+              </div>
+              <div class="testimonial-card__text mt-2">
+                  <p>
+                      Samrawit is an exceptional teammate who always brings a positive and collaborative attitude to every
+                      project. She is a skilled programmer and designer with a deep understanding of web technologies and
+                      user experience principles. I highly recommend her.
+                  </p>
+                  <p class="testimonial-card__author mt-2">- John Doe</p>
+              </div>
+          </div>
+          <div class="testimonial-card flex-shrink-0 border p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+              <div class="testimonial-card__avatar-container relative">
+                  <img src="images/person2.png" alt="User Avatar" class="testimonial-card__avatar rounded-full w-8 h-8" />
+                  <div class="testimonial-card__avatar-overlay absolute h-full bg-white"></div>
+              </div>
+              <div class="testimonial-card__text mt-2">
+                  <p>
+                      Samrawit is a talented and creative programmer and designer who is always looking for new and
+                      innovative ways to solve problems. She is a quick learner and is always eager to expand her
+                      knowledge and skills. Samrawit is also a great communicator and is able to clearly and effectively
+                      explain technical concepts to non-technical people.
+                  </p>
+                  <p class="testimonial-card__author mt-2">- Wax Miranda</p>
+              </div>
+          </div>
+          <div class="testimonial-card flex-shrink-0 border p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+              <div class="testimonial-card__avatar-container relative">
+                  <img src="images/person3.png" alt="User Avatar" class="testimonial-card__avatar rounded-full w-8 h-8" />
+                  <div class="testimonial-card__avatar-overlay absolute h-full bg-white"></div>
+              </div>
+              <div class="testimonial-card__text mt-2">
+                  <p>
+                      Samrawit is a pleasure to work with. She is always positive, enthusiastic, and motivated. She is
+                      also a very hard worker and is always willing to put in the extra effort to make sure that her
+                      projects are successful. Samrawit is a valuable asset to any team and I am very glad to have her
+                      as a colleague.
+                  </p>
+                  <p class="testimonial-card__author mt-2">- Steris Rud</p>
+              </div>
+          </div>
+          <div class="testimonial-card flex-shrink-0 border p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+              <div class="testimonial-card__avatar-container relative">
+                  <img src="images/person4.png" alt="User Avatar" class="testimonial-card__avatar rounded-full w-8 h-8" />
+                  <div class="testimonial-card__avatar-overlay absolute h-full bg-white"></div>
+              </div>
+              <div class="testimonial-card__text mt-2">
+                  <p>
+                      Samrawit is a skilled programmer and designer who has a knack for creating user-friendly and
+                      visually appealing designs. She is also a great problem solver and is always able to come up with
+                      creative solutions to complex problems. Samrawit is a team player and is always willing to
+                      collaborate with others to achieve common goals.
+                  </p>
+                  <p class="testimonial-card__author mt-2">- Wayne Keller</p>
+              </div>
+          </div>
+          <div class="testimonial-card flex-shrink-0 border p-4 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/4">
+            <div class="testimonial-card__avatar-container relative">
+                  <img src="images/person5.jpg" alt="User Avatar" class="testimonial-card__avatar rounded-full w-8 h-8" />
+                  <div class="testimonial-card__avatar-overlay absolute h-full w-full opacity-50"></div>
+              </div>
+              <div class="testimonial-card__text mt-2">
+                  <p>
+                      Samrawit is a talented and reliable programmer and designer. She is always on time and within
+                      budget. She is also a great communicator and is always willing to answer my questions and provide
+                      me with updates on the progress of my project. I am very happy with the work that Samrawit has
+                      done for me and I will definitely be using her services again in the future.
+                  </p>
+                  <p class="testimonial-card__author mt-2">- Vin Smith</p>
+              </div>
+          </div>
       </div>
-      <p>Made by Samrwit.K</p>
-      <p>&copy; 2023 Your Website. All rights reserved.</p>
+  </div>
+  <hr class="mt-8" />
+
+    <footer class="footer mt-8 p-4">
+      <div class="footer-content flex flex-col sm:flex-row justify-between items-center">
+        <div class="footer__social-icons flex flex-row space-x-4 mb-4 sm:mb-0">
+          <a href="https://www.github.com/samrwitt" target="_blank">
+            <img src="images/github.jpg" alt="GitHub" class="w-6 h-6" />
+          </a>
+          <a href="https://t.me/Fumble_wit" target="_blank">
+            <img src="images/telegram.png" alt="Telegram" class="w-6 h-6" />
+          </a>
+          <a href="https://et.linkedin.com/in/samrawit-tesfay-20a404283" target="_blank">
+            <img src="images/linkedin.png" alt="LinkedIn" class="w-6 h-6" />
+          </a>
+          <a href="mailto:samrawitkta@gmail.com" target="_blank">
+            <img src="images/Gmail_icon.png" alt="Gmail" class="w-6 h-6" />
+          </a>
+        </div>
+    
+        <div class="flex flex-col text-center ">
+          <p class="footer-content__copyright mb-2">&copy; 2023 Your Website. All rights reserved.</p>
+          </div>
+          <div class="flex flex-col text-center sm:text-right ">
+          <p class="footer-content__made-by">Made by Samrwit.K</p>
+        </div>
+      </div>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
